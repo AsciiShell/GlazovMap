@@ -1,0 +1,14 @@
+216 58.135512 52.680546 <h2>School &#8470;1</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p>
+217 58.137405 52.672171 <h2>School &#8470;2</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs, television studio 2x2</p> 
+218 58.140015 52.649675 <h2>School &#8470;3</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+219 58.145718 52.662959 <h2>School &#8470;4</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+220 58.145288 52.660424 <h2>School &#8470;5</h2> 
+230 58.140336 52.658410 <h2>School &#8470;6</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+231 58.125554 52.676256 <h2>School &#8470;8</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs,museum</p> <img src="../images/V.jpg." style="width:283px;height:212px;"> 
+232 58.143305 52.629780 <h2>School &#8470;9</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+233 58.134341 52.687290 <h2>School &#8470;11</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+234 58.140683 52.637534 <h2>School &#8470;12</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+235 58.139359 52.640911 <h2>School &#8470;13</h2> <p> </p> <br> <p>Extracurricular activities: sports clubs</p> 
+236 58.138555 52.691351 <h2>School &#8470;14</h2> <p>3 Classes</p> <br> <p>Extracurricular activities: sports clubs</p> 
+237 58.141806 52.694731 <h2>School &#8470;15</h2> <p>3 Classes</p> <br> <p>Extracurricular activities: sports clubs,dancing studio,vocal circle</p> <img src="../images/Pt.jpg." style="width:320px;height:240px;"> 
+238 58.141063 52.643292 <h2>School FML</h2> <p>4 Classes</p> <br> <p>Extracurricular activities: sports clubs,television studio, robotics circle,newspaper ,museum</p> <img src="../images/F.jpg." style="width:200px;height:150px;"> 

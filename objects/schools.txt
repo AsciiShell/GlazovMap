@@ -1,2 +1,0 @@
-0 58.141162 52.643032 "Goo goo g'joob" <br> 'juba juba juba'
-100 58.172289 52.636147 School no -1 <img src="http://www.w3schools.com/css/trolltunga.jpg" alt="Mountain View" style="width:500px;height:150px;">
