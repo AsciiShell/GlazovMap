@@ -81,72 +81,7 @@ def getMarks():
         MapScript += "myMap.geoObjects.add(myPlacemark" + str(i) + ");\n"
 
 
-def getJSpoly(Mid, points, text, backColor, MainColor, alpha, bold):
-    text = text.replace("'",r"\'")
-    text = text.replace('"',r'\"')
-    s = "\n myGeoObject" + str(Mid) + """ = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [["""
-    s += points + ',\n'
-    s += """]],fillRule: "nonZero"},properties: {balloonContent:" """
-    s += text + """ "\n  }}, {fillColor:"""
-    if backColor == "std":
-        s += "'#00FF00',\n"
-    else:
-        s += "'" + backColor + "',\n"
-        
-    if MainColor == "std":
-        s += "strokeColor: '#0000FF',\n"
-    else:
-        s += "strokeColor: '" + MainColor + "',\n"
-        
-    if alpha == "std":
-        s += "opacity: 0.5,\n"
-    else:
-        s += "opacity: " + alpha + ",\n"
-        
-    if bold == "std":
-        s += "strokeWidth: 5,\n"
-    else:
-        s += "strokeWidth:" + bold + ",\n"
-    s += "}),"
-    return s
 
-#Open&Get std poly
-def getPolyFiles():
-    global targetID
-    importFiles = []
-    #Main file of mark objects
-    obj = open("polygon/polygon.txt", 'r', encoding='utf-8')
-    objs = obj.readlines()
-    obj.close()
-    for line in objs:
-        if line == "\n":
-            continue
-        data = line.split()
-        #Check dataType in target IDs
-        if int(data[0]) in targetID:
-            #Add
-            importFiles.append((data[1]))
-    return importFiles
-
-#Add marks to script
-def getPoly():
-    global MapScript
-    importFiles = getPolyFiles()
-    importPoints = []
-    for i in importFiles:
-        obj = open("polygon/" + i, 'r', encoding='utf-8')
-        objs = obj.readlines()
-        obj.close()
-        for j in objs:
-            data = j.split()
-            importPoints.append(int(data[0]))
-            MapScript += getJSpoly(data[0], data[1], " ".join(data[6:]), data[2],data[3],data[4],data[5]) + "\n"
-        
-    MapScript = MapScript[:-2] + ";"
-    for i in importPoints:
-        MapScript += "myMap.geoObjects.add(myGeoObject" + str(i) + ");\n"
-    #Finalization
-    #MapScript += "});"
 
 def getFiltersObj():
     global targetID
@@ -185,7 +120,7 @@ def getFiltersPoly():
             s += '<input type="checkbox" name="poly" value = "' + data[0] + '">' + data[2] + "<Br>" + "\n"
     return s
 getMarks()
-getPoly()
+
 #Finalization
 MapScript += "});"
 #sys.exit(0)     

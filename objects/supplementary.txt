@@ -1,6 +1,6 @@
-206 58.140925 52.668982 <h2>Station of young tourists</h2> <p> phone 5-41-49</p> <img src="../images/Sut.jpg." style="width:300px;height:169px;"> 
-207 58.140373 52.652280 <h2>Children's cultural center</h2> <p>phone 3-58-30</p> <img src="../images/DDK.jpg." style="width:250px;height:136px;"> 
-208 58.140076 52.666008 <h2>Children and Youth Centre.Educational Building 1</h2> <p>phone 3-53-50</p> <img src="../images/D.jpg." style="width:350px;height:244px;"> 
+206 58.140925 52.668982 <h2>Station of young tourists</h2> <p> phone 5-41-49</p> <img src="../images/Sut.jpg" style="width:300px;height:169px;"> 
+207 58.140373 52.652280 <h2>Children's cultural center</h2> <p>phone 3-58-30</p> <img src="../images/DDK.jpg" style="width:250px;height:136px;"> 
+208 58.140076 52.666008 <h2>Children and Youth Centre.Educational Building 1</h2> <p>phone 3-53-50</p> <img src="../images/D.jpg" style="width:350px;height:244px;"> 
 209 58.144076 52.630782 <h2>Children and Youth Centre. Educational Building 3</h2> 
 210 58.133408 52.680190 <h2>Children and Youth Centre. Educational Building 2</h2> <p>phone 4-35-68</p> 
 211 58.148135 52.652786 <h2>Station of young of technicians</h2> <p>phone 3-13-10</p> 
