@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="../images/ico.ico" type="image/x-icon">
+
+        <title>Glazov map with places</title>
+        <script src="//api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+    
+
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [58.140429, 52.674267],
+                zoom: 14,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            })
+    ,
+ myPlacemark500 = new ymaps.Placemark([58.1327748, 52.6674299], {
+balloonContent: '<h2>Railway Station</h2> <br> <img src="../images/Vokzal.jpg" style="width:195px;height:100px;"> <br> <p>Way to Moscow (1200km)</p> <br> <p>Way to Vladivostok (8000km)</p> <br> <p>Way to the Black Sea (2500km)</p> <br> <p>Way to the Ural Mountains (400km)</p> <br> <p>Way to Izhevsk (175km)</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/train.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark601 = new ymaps.Placemark([58.132673, 52.669639], {
+balloonContent: '<h2>Railway station</h2><img src="../images/ZhD.jpg" style="width:310px;height:200px;"><p>Glazov-Moscow(6 hours,2-3 thousand rubles)</p><br><p>Glazov-Vladivostok(6 days,7840 rubles)</p><br><p>Glazov-Brest(32 hours,6406 rubles)</p><br>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/compas.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark602 = new ymaps.Placemark([58.132886, 52.67098], {
+balloonContent: '<h2>Bus station</h2><img src="../images/Avtovokzal.jpg" style="width:400px;height:300px;"><p>Glazov-Izhevsk(3 hours, 350 rubles)</p><br><p>Glazov-Sarapul(5 hours, 624 rubles)</p><br><p>Glazov-Mozhga(5 hours, 577 rubles)</p><br><p>Glazov-Perm(6 hours, 620 rubles)</p><br>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/compas.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark603 = new ymaps.Placemark([58.139961, 52.671635], {
+balloonContent: '<h2>Sapsan company</h2><img src="../images/Sapsan.jpg" style="width:400px;height:300px;"><p>Glazov-Izhevsk</p><br><p>Monday-Friday: 06:00; 07:00; 10:00; 13:00; 15:00; 18:00</p><br><p>Saturdayday: 07:00; 10:00; 12:00; 15:00; 18:00</p><br><p>Sunday: 07:00; 11:00; 14:30; 16:00; 18:00</p><br>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/compas.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+;myMap.geoObjects.add(myPlacemark500);
+myMap.geoObjects.add(myPlacemark601);
+myMap.geoObjects.add(myPlacemark602);
+myMap.geoObjects.add(myPlacemark603);
+});
+
+          
+
+        </script>
+
+            <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+                    p, h2{
+                            margin: 0px;
+                    }
+            #map {
+                width: 80%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                float:left;
+            }
+            #text{
+                width: 18%;
+                padding: 1%;
+                margin: 0;
+                float:right;
+            }
+            #footer {
+                position: fixed;
+                bottom:0;
+                padding: 5px; 
+                background: #FFFFFF;
+                color: #000000; 
+                width: 100%;
+           }
+
+        </style>
+    </head>
+    <body>
+
+
+    <div id="map" ></div>
+    <div id="text" >
+<form id="sumbitform" action="00000011.html">
+<p><b>Choose the objects</b><Br>
+<input id="cb2" type="checkbox" name="obj" value = "2"><img src="../images/Entertainment.png" style="width:16px;height:16px;" align="top">Entertainment
+<Br>
+<input id="cb3" type="checkbox" name="obj" value = "3"><img src="../images/economy.png" style="width:16px;height:16px;" align="top">Economy
+<Br>
+<input id="cb4" type="checkbox" name="obj" value = "4"><img src="../images/school.png" style="width:16px;height:16px;" align="top">School
+<Br>
+<input id="cb5" type="checkbox" name="obj" value = "5"><img src="../images/supplementary.png" style="width:16px;height:16px;" align="top">Supplementary&ensp;education
+<Br>
+<input id="cb7" type="checkbox" name="obj" value = "7"><img src="../images/college.png" style="width:16px;height:16px;" align="top">College
+<Br>
+<input id="cb6" type="checkbox" name="obj" value = "6"><img src="../images/eye.ico" style="width:16px;height:16px;" align="top">House
+<Br>
+<input id="cb8" type="checkbox" name="obj" value = "8" checked><img src="../images/train.png" style="width:16px;height:16px;" align="top">Railway
+<Br>
+<input id="cb9" type="checkbox" name="obj" value = "9" checked><img src="../images/compas.png" style="width:16px;height:16px;" align="top">Transport
+<Br>
+
+
+          </p>
+          <p><input type="submit" value="Submit"></p>
+         </form>
+             <br>
+             
+        <div id="footer">
+           
+           <a href="https://github.com/AsciiShell/GlazovMap">Repository on GitHub</a>
+        </div>
+    </div>
+        <script>
+  document.getElementById('cb2').onchange = function() {
+    var i = 0;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb2').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+   </script>
+  <script>
+  document.getElementById('cb3').onchange = function() {
+    var i = 1;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb3').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb4').onchange = function() {
+    var i = 2;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb4').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+     </script>
+  <script>
+    document.getElementById('cb5').onchange = function() {
+    var i = 3;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb5').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+     </script>
+  <script>
+    document.getElementById('cb7').onchange = function() {
+    var i = 4;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb7').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb6').onchange = function() {
+    var i = 5;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb6').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb8').onchange = function() {
+    var i = 6;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb8').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };  
+    </script>
+  <script>
+   document.getElementById('cb9').onchange = function() {
+    var i = 7;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb9').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+</script>
+    </body>
+    </html>
+    

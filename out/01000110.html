@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="../images/ico.ico" type="image/x-icon">
+
+        <title>Glazov map with places</title>
+        <script src="//api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+    
+
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [58.140429, 52.674267],
+                zoom: 14,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            })
+    ,
+ myPlacemark300 = new ymaps.Placemark([58.149653, 52.657908], {
+balloonContent: '<img src="http://vglazove.ru/wp-content/uploads/2014/08/zavod-chmz.jpg" alt="Chep" style="width:380px;height:250px;">The Chepetsky Mechanical Plant:<br>More than 3000 employees;<br>Provides 70% of the town budget;<br>Required: turners, electricians, engineersare.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark301 = new ymaps.Placemark([58.130935, 52.608866], {
+balloonContent: '<img src="http://www.udmpf.ru/bitrix/shared/udmpf_ru/img/logo.png" style="width:300px;height:250px;"><br>The Glazov Poultry Factory:<br>In the list of "100 the best products in Russia";<br>A laureate of an international "King of Chicken" contest<br>More than 180 products;<br>Required: butchers, packers, pasture managements, loaders.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark302 = new ymaps.Placemark([58.149041, 52.66596], {
+balloonContent: '<img src="http://vglazove.ru/wp-content/uploads/2016/06/lvz-glazov.jpg" style="width:380px;height:250px;">The Glazov Distillery Plant "GLAZOVSKY":<br>Exports to Australia, New Zealand, Germany, Cyprus, the USA;<br>350 employees;<br>Required: loaders, locksmiths, conveyor workers.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark303 = new ymaps.Placemark([58.132423, 52.685084], {
+balloonContent: '<img src="http://glazovmebel.ru/img/furniture/bedroom/berlin1/berlin1.jpg" style="width:380px;height:200px;">The Glazov Furniture Plant:<br>A good salary, job promotion and stability;<br>A social package and social guarantees;<br>A spa treatment and medical care;<br>Special credit conditions for employees;<br>Required: carpenters, locksmiths.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark400 = new ymaps.Placemark([58.138444, 52.655474], {
+balloonContent: '<img src="../images/EVS1.jpg" style="width:380px;height:300px;">price: buy - 1 900 000; rent - 10 000 rubles per month.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/eye.ico',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark401 = new ymaps.Placemark([58.140101, 52.689503], {
+balloonContent: '<img src="../images/EVS2.jpg" style="width:380px;height:250px;">price: buy - 1 700 000; rent - 8 000 rubles per month.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/eye.ico',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark500 = new ymaps.Placemark([58.1327748, 52.6674299], {
+balloonContent: '<h2>Railway Station</h2> <br> <img src="../images/Vokzal.jpg" style="width:195px;height:100px;"> <br> <p>Way to Moscow (1200km)</p> <br> <p>Way to Vladivostok (8000km)</p> <br> <p>Way to the Black Sea (2500km)</p> <br> <p>Way to the Ural Mountains (400km)</p> <br> <p>Way to Izhevsk (175km)</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/train.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+;myMap.geoObjects.add(myPlacemark300);
+myMap.geoObjects.add(myPlacemark301);
+myMap.geoObjects.add(myPlacemark302);
+myMap.geoObjects.add(myPlacemark303);
+myMap.geoObjects.add(myPlacemark400);
+myMap.geoObjects.add(myPlacemark401);
+myMap.geoObjects.add(myPlacemark500);
+});
+
+          
+
+        </script>
+
+            <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+                    p, h2{
+                            margin: 0px;
+                    }
+            #map {
+                width: 80%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                float:left;
+            }
+            #text{
+                width: 18%;
+                padding: 1%;
+                margin: 0;
+                float:right;
+            }
+            #footer {
+                position: fixed;
+                bottom:0;
+                padding: 5px; 
+                background: #FFFFFF;
+                color: #000000; 
+                width: 100%;
+           }
+
+        </style>
+    </head>
+    <body>
+
+
+    <div id="map" ></div>
+    <div id="text" >
+<form id="sumbitform" action="01000110.html">
+<p><b>Choose the objects</b><Br>
+<input id="cb2" type="checkbox" name="obj" value = "2"><img src="../images/Entertainment.png" style="width:16px;height:16px;" align="top">Entertainment
+<Br>
+<input id="cb3" type="checkbox" name="obj" value = "3" checked><img src="../images/economy.png" style="width:16px;height:16px;" align="top">Economy
+<Br>
+<input id="cb4" type="checkbox" name="obj" value = "4"><img src="../images/school.png" style="width:16px;height:16px;" align="top">School
+<Br>
+<input id="cb5" type="checkbox" name="obj" value = "5"><img src="../images/supplementary.png" style="width:16px;height:16px;" align="top">Supplementary&ensp;education
+<Br>
+<input id="cb7" type="checkbox" name="obj" value = "7"><img src="../images/college.png" style="width:16px;height:16px;" align="top">College
+<Br>
+<input id="cb6" type="checkbox" name="obj" value = "6" checked><img src="../images/eye.ico" style="width:16px;height:16px;" align="top">House
+<Br>
+<input id="cb8" type="checkbox" name="obj" value = "8" checked><img src="../images/train.png" style="width:16px;height:16px;" align="top">Railway
+<Br>
+<input id="cb9" type="checkbox" name="obj" value = "9"><img src="../images/compas.png" style="width:16px;height:16px;" align="top">Transport
+<Br>
+
+
+          </p>
+          <p><input type="submit" value="Submit"></p>
+         </form>
+             <br>
+             
+        <div id="footer">
+           
+           <a href="https://github.com/AsciiShell/GlazovMap">Repository on GitHub</a>
+        </div>
+    </div>
+        <script>
+  document.getElementById('cb2').onchange = function() {
+    var i = 0;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb2').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+   </script>
+  <script>
+  document.getElementById('cb3').onchange = function() {
+    var i = 1;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb3').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb4').onchange = function() {
+    var i = 2;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb4').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+     </script>
+  <script>
+    document.getElementById('cb5').onchange = function() {
+    var i = 3;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb5').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+     </script>
+  <script>
+    document.getElementById('cb7').onchange = function() {
+    var i = 4;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb7').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb6').onchange = function() {
+    var i = 5;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb6').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb8').onchange = function() {
+    var i = 6;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb8').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };  
+    </script>
+  <script>
+   document.getElementById('cb9').onchange = function() {
+    var i = 7;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb9').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+</script>
+    </body>
+    </html>
+    
