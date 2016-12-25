@@ -10,9 +10,6 @@ targetID = []
 for i in filt:
     targetID.append(int(i))
 
-filt = form.getlist("poly")
-for i in filt:
-    targetID.append(int(i))
 
 if targetID == []:
     targetID = list(range(0,100))
@@ -27,7 +24,7 @@ ymaps.ready(function () {
         }, {
             searchControlProvider: 'yandex#search'
         })
-"""#Start script
+"""
 
 
 
@@ -102,23 +99,7 @@ def getFiltersObj():
         s += '<img src="../images/' + data[2] + '" style="width:16px;height:16px;" align="top">' + data[3] +  "\n""<Br>" +"\n"
     return s
 
-def getFiltersPoly():
-    global targetID
-    importFiles = []
-    #Main file of mark objects
-    obj = open("polygon/polygon.txt", 'r', encoding='utf-8')
-    objs = obj.readlines()
-    obj.close()
-    s = ""
-    for i in objs:
-        data = i.split()
-        if i == '\n':
-            continue
-        if int(data[0]) in targetID:
-            s += '<input type="checkbox" name="poly" value = "' + data[0] + '" checked>' + data[2] + "<Br>" + "\n"
-        else:
-            s += '<input type="checkbox" name="poly" value = "' + data[0] + '">' + data[2] + "<Br>" + "\n"
-    return s
+
 getMarks()
 
 #Finalization

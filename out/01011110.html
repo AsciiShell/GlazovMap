@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="../images/ico.ico" type="image/x-icon">
+
+        <title>Glazov map with places</title>
+        <script src="//api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+    
+
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [58.140429, 52.674267],
+                zoom: 14,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            })
+    ,
+ myPlacemark300 = new ymaps.Placemark([58.149653, 52.657908], {
+balloonContent: '<img src="http://vglazove.ru/wp-content/uploads/2014/08/zavod-chmz.jpg" alt="Chep" style="width:380px;height:250px;">The Chepetsky Mechanical Plant:<br>More than 3000 employees;<br>Provides 70% of the town budget;<br>Required: turners, electricians, engineersare.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark301 = new ymaps.Placemark([58.130935, 52.608866], {
+balloonContent: '<img src="http://www.udmpf.ru/bitrix/shared/udmpf_ru/img/logo.png" style="width:300px;height:250px;"><br>The Glazov Poultry Factory:<br>In the list of "100 the best products in Russia";<br>A laureate of an international "King of Chicken" contest<br>More than 180 products;<br>Required: butchers, packers, pasture managements, loaders.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark302 = new ymaps.Placemark([58.149041, 52.66596], {
+balloonContent: '<img src="http://vglazove.ru/wp-content/uploads/2016/06/lvz-glazov.jpg" style="width:380px;height:250px;">The Glazov Distillery Plant "GLAZOVSKY":<br>Exports to Australia, New Zealand, Germany, Cyprus, the USA;<br>350 employees;<br>Required: loaders, locksmiths, conveyor workers.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark303 = new ymaps.Placemark([58.132423, 52.685084], {
+balloonContent: '<img src="http://glazovmebel.ru/img/furniture/bedroom/berlin1/berlin1.jpg" style="width:380px;height:200px;">The Glazov Furniture Plant:<br>A good salary, job promotion and stability;<br>A social package and social guarantees;<br>A spa treatment and medical care;<br>Special credit conditions for employees;<br>Required: carpenters, locksmiths.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/economy.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark206 = new ymaps.Placemark([58.140925, 52.668982], {
+balloonContent: '<h2>Station of young tourists</h2> <p> phone 5-41-49</p> <img src="../images/Sut.jpg" style="width:300px;height:169px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark207 = new ymaps.Placemark([58.140373, 52.65228], {
+balloonContent: '<h2>Children\'s cultural center</h2> <p>phone 3-58-30</p> <img src="../images/DDK.jpg" style="width:250px;height:136px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark208 = new ymaps.Placemark([58.140076, 52.666008], {
+balloonContent: '<h2>Children and Youth Centre.Educational Building 1</h2> <p>phone 3-53-50</p> <img src="../images/D.jpg" style="width:350px;height:244px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark209 = new ymaps.Placemark([58.144076, 52.630782], {
+balloonContent: '<h2>Children and Youth Centre. Educational Building 3</h2>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark210 = new ymaps.Placemark([58.133408, 52.68019], {
+balloonContent: '<h2>Children and Youth Centre. Educational Building 2</h2> <p>phone 4-35-68</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark211 = new ymaps.Placemark([58.148135, 52.652786], {
+balloonContent: '<h2>Station of young of technicians</h2> <p>phone 3-13-10</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark212 = new ymaps.Placemark([58.152154, 52.664499], {
+balloonContent: '<h2>DOSAAF</h2> <p>Categories:A, B, C, D, E</p> <br> <p>3 month period of study</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark213 = new ymaps.Placemark([58.145758, 52.662941], {
+balloonContent: '<h2>PLAZA</h2> <p>Categories:A, B</p> <br> <p>3 month period of study</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark214 = new ymaps.Placemark([58.134003, 52.675673], {
+balloonContent: '<h2>Autoschool based on the Glazov Technic college</h2> <p>Categories:B, C</p> <br> <p>3 month period of study</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark215 = new ymaps.Placemark([58.141874, 52.694716], {
+balloonContent: '<h2>Autoschool based on the School &#8470;15 named after Rozhdestvensky</h2> <p>Categories:B.</p> <br> <p>3 month period of study</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/supplementary.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark201 = new ymaps.Placemark([58.136426, 52.673881], {
+balloonContent: '<h2>State Pedagogical Institute names after Korolenko</h2> <p>4 Departments</p> <br> <p>Prepares teachers physics,mathematics,literature,history and social studies </p> <br> <p>Dorm:4</p> <br> <p>Elective activities.Seminars and conferences</p> <br> <p>4-5 years of study</p> <br> <p>Scholarships 5000 and grants </p><img src="../images/G.jpg" style="width:302px;height:226px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/college.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark202 = new ymaps.Placemark([58.134392, 52.643057], {
+balloonContent: '<h2>&laquo;Glazov Polytechnic College&raquo;</h2> <p>7 Departments</p> <br> <p>Prepares technologists on different spheres</p> <br> <p>Dorm:1</p> <br> <p> 2 years 10 months-4 years of study</p> <br> <p> Scholarship from 100 to 500</p> <img src="../images/P.jpg" style="width:310px;height:200px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/college.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark203 = new ymaps.Placemark([58.133966, 52.675791], {
+balloonContent: '<h2>&laquo;Glazov technic college&raquo;</h2> <p>8 Departments</p> <br> <p>Prepares mechanics, technician- electrician, technologists on different spheres<p/> <br> <p>Dorm:1<p/> <br> <p> 3 years 10 months years of study<p/> <br> <p> Scholarship 532</p> <img src="../images/T.jpg" style="width:260px;height:195px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/college.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark204 = new ymaps.Placemark([58.140223, 52.657217], {
+balloonContent: '<h2>Glazov Engineering-Economic Institute</h2> <p>4 Departments</p> <br> <p>Prepares economist, manager, engineers</p> <br> <p>Scholarships 4600 and grants</p> <br> <p> 5-6 years of study</p> <br> <img src="../images/I.jpg" style="width:310px;height:200px;">'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/college.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark205 = new ymaps.Placemark([58.139613, 52.641258], {
+balloonContent: '<h2>Glazov branch of University of Russian Academy of education</h2> <p>4 Department</p> <br> <p>Prepares economist, commercial directors, psychologists</p> <br> <p>Training of foreign and computer languages. 4 years of study. Scholarships and grants.</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/college.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark400 = new ymaps.Placemark([58.138444, 52.655474], {
+balloonContent: '<img src="../images/EVS1.jpg" style="width:380px;height:300px;">price: buy - 1 900 000; rent - 10 000 rubles per month.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/eye.ico',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark401 = new ymaps.Placemark([58.140101, 52.689503], {
+balloonContent: '<img src="../images/EVS2.jpg" style="width:380px;height:250px;">price: buy - 1 700 000; rent - 8 000 rubles per month.'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/eye.ico',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+,
+ myPlacemark500 = new ymaps.Placemark([58.1327748, 52.6674299], {
+balloonContent: '<h2>Railway Station</h2> <br> <img src="../images/Vokzal.jpg" style="width:195px;height:100px;"> <br> <p>Way to Moscow (1200km)</p> <br> <p>Way to Vladivostok (8000km)</p> <br> <p>Way to the Black Sea (2500km)</p> <br> <p>Way to the Ural Mountains (400km)</p> <br> <p>Way to Izhevsk (175km)</p>'
+}, {
+iconLayout: 'default#image',
+iconImageHref: '/images/train.png',
+iconImageSize: [32, 32],
+iconImageOffset: [-16, -16]
+})
+;myMap.geoObjects.add(myPlacemark300);
+myMap.geoObjects.add(myPlacemark301);
+myMap.geoObjects.add(myPlacemark302);
+myMap.geoObjects.add(myPlacemark303);
+myMap.geoObjects.add(myPlacemark206);
+myMap.geoObjects.add(myPlacemark207);
+myMap.geoObjects.add(myPlacemark208);
+myMap.geoObjects.add(myPlacemark209);
+myMap.geoObjects.add(myPlacemark210);
+myMap.geoObjects.add(myPlacemark211);
+myMap.geoObjects.add(myPlacemark212);
+myMap.geoObjects.add(myPlacemark213);
+myMap.geoObjects.add(myPlacemark214);
+myMap.geoObjects.add(myPlacemark215);
+myMap.geoObjects.add(myPlacemark201);
+myMap.geoObjects.add(myPlacemark202);
+myMap.geoObjects.add(myPlacemark203);
+myMap.geoObjects.add(myPlacemark204);
+myMap.geoObjects.add(myPlacemark205);
+myMap.geoObjects.add(myPlacemark400);
+myMap.geoObjects.add(myPlacemark401);
+myMap.geoObjects.add(myPlacemark500);
+});
+
+          
+
+        </script>
+
+            <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+                    p, h2{
+                            margin: 0px;
+                    }
+            #map {
+                width: 80%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                float:left;
+            }
+            #text{
+                width: 18%;
+                padding: 1%;
+                margin: 0;
+                float:right;
+            }
+            #footer {
+                position: fixed;
+                bottom:0;
+                padding: 5px; 
+                background: #FFFFFF;
+                color: #000000; 
+                width: 100%;
+           }
+
+        </style>
+    </head>
+    <body>
+
+
+    <div id="map" ></div>
+    <div id="text" >
+<form id="sumbitform" action="01011110.html">
+<p><b>Choose the objects</b><Br>
+<input id="cb2" type="checkbox" name="obj" value = "2"><img src="../images/Entertainment.png" style="width:16px;height:16px;" align="top">Entertainment
+<Br>
+<input id="cb3" type="checkbox" name="obj" value = "3" checked><img src="../images/economy.png" style="width:16px;height:16px;" align="top">Economy
+<Br>
+<input id="cb4" type="checkbox" name="obj" value = "4"><img src="../images/school.png" style="width:16px;height:16px;" align="top">School
+<Br>
+<input id="cb5" type="checkbox" name="obj" value = "5" checked><img src="../images/supplementary.png" style="width:16px;height:16px;" align="top">Supplementary&ensp;education
+<Br>
+<input id="cb7" type="checkbox" name="obj" value = "7" checked><img src="../images/college.png" style="width:16px;height:16px;" align="top">College
+<Br>
+<input id="cb6" type="checkbox" name="obj" value = "6" checked><img src="../images/eye.ico" style="width:16px;height:16px;" align="top">House
+<Br>
+<input id="cb8" type="checkbox" name="obj" value = "8" checked><img src="../images/train.png" style="width:16px;height:16px;" align="top">Railway
+<Br>
+<input id="cb9" type="checkbox" name="obj" value = "9"><img src="../images/compas.png" style="width:16px;height:16px;" align="top">Transport
+<Br>
+
+
+          </p>
+          <p><input type="submit" value="Submit"></p>
+         </form>
+             <br>
+             
+        <div id="footer">
+           
+           <a href="https://github.com/AsciiShell/GlazovMap">Repository on GitHub</a>
+        </div>
+    </div>
+        <script>
+  document.getElementById('cb2').onchange = function() {
+    var i = 0;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb2').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+   </script>
+  <script>
+  document.getElementById('cb3').onchange = function() {
+    var i = 1;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb3').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb4').onchange = function() {
+    var i = 2;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb4').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+     </script>
+  <script>
+    document.getElementById('cb5').onchange = function() {
+    var i = 3;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb5').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+     </script>
+  <script>
+    document.getElementById('cb7').onchange = function() {
+    var i = 4;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb7').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb6').onchange = function() {
+    var i = 5;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb6').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  }; 
+     </script>
+  <script>
+   document.getElementById('cb8').onchange = function() {
+    var i = 6;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb8').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };  
+    </script>
+  <script>
+   document.getElementById('cb9').onchange = function() {
+    var i = 7;
+    var f = document.getElementById('sumbitform');
+    var s = f.getAttribute("action");
+    if (document.getElementById('cb9').checked)
+    {
+        s = s.slice(0,i) + "1" + s.slice(i+1);
+    }
+    else
+    {
+        s = s.slice(0,i) + "0" + s.slice(i+1);
+    }
+    f.setAttribute("action",s);
+    
+  };
+</script>
+    </body>
+    </html>
+    
